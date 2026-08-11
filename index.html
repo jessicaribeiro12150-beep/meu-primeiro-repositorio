@@ -2,20 +2,36 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Jéssica Ribeiro</title>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <Header>
-        <h1> Jéssica Ribeiro |Desenvolvedora em formação</h1>
-        <p> Estudante de Análise e Desenvolvimento de Sistemas</p>
-    </Header>
+    <!-- 🧭 Menu de Navegação Fixo no Topo -->
+    <nav class="menu-topo">
+        <ul>
+            <li><a href="#inicio">INÍCIO</a></li>
+            <li><a href="#sobre">SOBRE</a></li>
+            <li><a href="#habilidades">HABILIDADES</a></li>
+            <li><a href="#projetos">PROJETOS</a></li>
+            <li><a href="#contato">CONTATO</a></li>
+        </ul>
+    </nav>
+
+    <!-- 📌 Seção Início -->
+    <header id="inicio">
+      <img src="imagem.png" alt="Foto" width="100" height="100">
+        <h1>Jéssica Ribeiro | Desenvolvedora em formação</h1>
+        <p>Estudante de Análise e Desenvolvimento de Sistemas</p>
+        <a href="#projetos" class="btn-destaque">Ver meus projetos</a>
+    </header>
 
     <main>
 
-        <selection>
+        <!-- 👤 Seção Sobre -->
+        <section id="sobre" class="secao">
             <h2>Sobre mim</h2>
             <p>Sou uma estudante de Análise e Desenvolvimento de Sistemas,<br> 
                 apaixonada por tecnologia e inovação.<br> 
@@ -23,11 +39,95 @@
                 Estou sempre em busca de novos desafios e oportunidades<br> 
                 para crescer profissionalmente.
             </p>
-                <a href="sobre.html">Saiba mais sobre mim</a> 
-        </selection>git 
+            <a href="sobre.html" class="btn-link">Saiba mais sobre mim →</a>
+        </section>
+
+        <!-- 💡 Seção Habilidades -->
+        <section id="habilidades" class="secao">
+            <h2>Minhas Habilidades</h2>
+            <div class="grade-cards">
+                <div class="card-habilidade">
+                    <span class="icone">💻</span>
+                    <h3>Java</h3>
+                    <p>Lógica de programação e fundamentos</p>
+                </div>
+                <div class="card-habilidade">
+                    <span class="icone">🐍</span>
+                    <h3>Python</h3>
+                    <p>Automação e projetos iniciantes</p>
+                </div>
+                <div class="card-habilidade">
+                    <span class="icone">🌐</span>
+                    <h3>HTML & CSS</h3>
+                    <p>Estruturação e estilização de sites</p>
+                </div>
+                <div class="card-habilidade">
+                    <span class="icone">🔧</span>
+                    <h3>Git & GitHub</h3>
+                    <p>Versionamento e publicação de código</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🚀 Seção Projetos -->
+        <section id="projetos" class="secao">
+            <h2>Meus Projetos</h2>
+            <p class="subtitulo">Códigos e trabalhos publicados no GitHub</p>
+            <div class="grade-cards">
+                <!-- Exemplo de card de projeto → Vamos substituir pelos SEUS projetos reais! -->
+                <div class="card-projeto">
+                    <h3>📁 Meu Primeiro Site</h3>
+                    <p>Página pessoal desenvolvida com HTML e CSS, apresentando meus dados e objetivos.</p>
+                    <a href="https://github.com/seu-usuario/meu-primeiro-site" target="_blank" class="btn-projeto">Ver código no GitHub →</a>
+                </div>
+                <div class="card-projeto">
+                    <h3>📁 Projeto em Java</h3>
+                    <p>Exercícios e aplicações desenvolvidos durante meus estudos de Java.</p>
+                    <a href="https://github.com/seu-usuario/projetos-java" target="_blank" class="btn-projeto">Ver código no GitHub →</a>
+                </div>
+                <div class="card-projeto">
+                    <h3>📁 Projetos em Python</h3>
+                    <p>Scripts e soluções práticas usando Python.</p>
+                    <a href="https://github.com/seu-usuario/projetos-python" target="_blank" class="btn-projeto">Ver código no GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ✉️ Seção Contato -->
+        <section id="contato" class="secao">
+            <h2>Contato</h2>
+            <p>Quer conhecer mais ou conversar sobre uma oportunidade? Me encontre aqui:</p>
+            <div class="links-contato">
+                <a href="https://github.com/jessicaribeiro12150-beep/meu-primeiro-repositorio" target="_blank">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/jessica-da-silva-ribeiro-dev" target="_blank">💼 LinkedIn</a>
+                <a href="https://mail.google.com/mail/?view=cm&to=jessicaribeiro12150@gmail.com&su=Recrutamento&body=Tenho interesse em conversar sobre oportunidades." target="_blank">📧 e-mail</a>
+            </div>
+        </section>
 
     </main>
+
     <footer>
+        <p>&copy; 2026 Jéssica Ribeiro. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- ⚡ Rolagem suave entre as seções -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const alvo = document.querySelector(this.getAttribute('href'));
+                if(alvo) {
+                    alvo.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
         <p>&copy; 2026 Jéssica Ribeiro. Todos os direitos reservados.</p>
     </footer>
 
