@@ -271,4 +271,36 @@ footer {
         font-size: 13px;
     }
 }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 100px 20px 60px;
+}
+
+.foto-perfil, img[src="imagem.png"] {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 15px #00ffff55;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.texto-cabecalho {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajuste para celular */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
