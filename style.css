@@ -303,4 +303,88 @@ header {
         text-align: center;
     }
 }
+.secao-pagina {
+    max-width: 800px;
+    margin: 150px auto 60px;  /* Aumentei de 100px para 150px → desce tudo! */
+    padding: 30px;             /* Mais espaçamento interno */
+    text-align: center;
+}
+.secao-pagina {
+    max-width: 800px;
+    margin: 150px auto 60px;  /* Aumentei de 100px para 150px → desce tudo! */
+    padding: 30px;             /* Mais espaçamento interno */
+    text-align: center;
+}
+/* Título Sobre Mim em Neon Azul */
+.titulo-sobre {
+    color: #00ffff;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    margin: 40px 0;
+}
+
+/* Container das caixinhas */
+.caixas-sobre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Cada caixinha */
+.caixa-item {
+    flex: 1 1 350px;
+    background: rgba(0, 40, 40, 0.25);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.caixa-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.35);
+}
+
+/* Título da caixa = Pergunta */
+.pergunta {
+    background: linear-gradient(90deg, #006666, #009999);
+    color: #fff;
+    padding: 15px 20px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    font-size: 1.05rem;
+    border-bottom: 2px solid #00ffff;
+}
+
+/* Conteúdo = Resposta */
+.resposta {
+    padding: 20px;
+    color: #e0ffff;
+    line-height: 1.8;
+}
+
+.resposta p {
+    margin: 8px 0;
+}
+
+/* Ajuste no espaçamento do topo */
+.secao-pagina {
+    margin: 150px auto 60px;
+}
+
+/* Celular: uma abaixo da outra */
+@media (max-width: 768px) {
+    .caixas-sobre {
+        flex-direction: column;
+    }
+    .titulo-sobre {
+        font-size: 1.8rem;
+    }
+}
+
+
 
